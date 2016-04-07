@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+	<title>easyScroll.js</title>
+	<style>
+	p {
+		font-size: 12px;
+		display: block;
+		line-height: 100px;
+		height: 100px;
+		text-align: center;
+	}
+	p:nth-of-type(5n){
+		background: pink;
+	}
+	p:nth-of-type(5n+1){
+		background: blue;
+	}
+	p:nth-of-type(5n+2){
+		background: green;
+	}
+	p:nth-of-type(5n+3){
+		background: red;
+	}
+	p:nth-of-type(5n+4){
+		background: yellow;
+	}
+	</style>
+</head>
+<body>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+	<p>点击我</p>
+
+</body>
+<script src="../dist/easyScroll.min.js"></script>
+<script>
+	[].forEach.call( document.querySelectorAll('p') , function(p){
+		p.onclick=function(){
+			console.log(this, this.getBoundingClientRect())
+			easyScroll(this.offsetTop - screen.availHeight / 2 + 100);
+		}
+	})
+</script>
+</html>
